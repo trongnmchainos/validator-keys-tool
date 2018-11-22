@@ -1,0 +1,4 @@
+[submodule "extras/jbcoind"]
+	path = extras/jbcoind
+	url = https://github.com/jbcoin/jbcoind.git
+	branch = develop

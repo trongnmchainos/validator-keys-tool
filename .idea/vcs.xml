@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp/extras/jbcoind" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp/extras/jbcoind/docs/docca" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp/extras/jbcoind/src/nudb/doc/docca" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp/extras/jbcoind/src/nudb/extras/beast" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/extras/jbcoin-libpp/extras/jbcoind/src/nudb/extras/rocksdb" vcs="Git" />
+  </component>
+</project>

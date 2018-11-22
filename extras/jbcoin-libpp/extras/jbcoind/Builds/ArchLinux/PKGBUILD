@@ -1,0 +1,38 @@
+# Maintainer: Roberto Catini <roberto.catini@gmail.com>
+
+pkgname=jbcoind
+pkgrel=1
+pkgver=0
+pkgdesc="Jbcoin peer-to-peer network daemon"
+arch=('i686' 'x86_64')
+url="https://github.com/jbcoin/jbcoind"
+license=('custom:ISC')
+depends=('protobuf' 'openssl' 'boost-libs')
+makedepends=('git' 'scons' 'boost')
+backup=("etc/$pkgname/jbcoind.cfg")
+source=("git://github.com/jbcoin/jbcoind.git#branch=master")
+sha512sums=('SKIP')
+
+pkgver() {
+	cd "$srcdir/$pkgname"
+	git describe --long --tags | sed -r 's/([^-]*-g)/r\1/;s/-/./g'
+}
+
+build() {
+	cd "$srcdir/$pkgname"
+	scons
+}
+
+check() {
+	cd "$srcdir/$pkgname"
+	build/jbcoind --unittest
+}
+
+package() {
+	cd "$srcdir/$pkgname"
+	install -D -m644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+	install -D build/jbcoind "$pkgdir/usr/bin/jbcoind"
+	install -D -m644 doc/jbcoind-example.cfg "$pkgdir/etc/$pkgname/jbcoind.cfg"
+	mkdir -p "$pkgdir/var/lib/$pkgname/db"
+	mkdir -p "$pkgdir/var/log/$pkgname"
+}

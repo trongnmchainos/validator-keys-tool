@@ -1,0 +1,3 @@
+[submodule "extras/jbcoin-libpp"]
+	path = extras/jbcoin-libpp
+	url = https://github.com/jbcoin/jbcoin-libpp.git

@@ -1,0 +1,10 @@
+[Unit]
+Description=Jbcoin Peer-to-Peer Network Daemon
+ 
+[Service]
+Type=simple
+User=nobody
+ExecStart=/usr/bin/jbcoind --conf=/etc/jbcoind/jbcoind.cfg
+ 
+[Install]
+WantedBy=multi-user.target
